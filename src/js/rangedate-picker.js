@@ -312,6 +312,7 @@ export default {
       const result = this.getDayIndexInMonth(r, i, this.startMonthDay) + 1
       this.dateRange = Object.assign({}, this.dateRange, this.getNewDateRange(result, this.activeMonthStart,
       this.activeYearStart))
+      this.$emit('selected', this.dateRange)
       if (this.dateRange.start && this.dateRange.end) {
         this.presetActive = ''
         if (this.isCompact) {
@@ -323,6 +324,7 @@ export default {
       const result = this.getDayIndexInMonth(r, i, this.startNextMonthDay) + 1
       this.dateRange = Object.assign({}, this.dateRange, this.getNewDateRange(result, this.startNextActiveMonth,
       this.activeYearEnd))
+      this.$emit('selected', this.dateRange)
       if (this.dateRange.start && this.dateRange.end) {
         this.presetActive = ''
       }
@@ -373,6 +375,7 @@ export default {
     updatePreset (item) {
       this.presetActive = item.label
       this.dateRange = item.dateRange
+      this.$emit('selected', this.dateRange)
       // update start active month
       this.activeMonthStart = this.dateRange.start.getMonth()
       this.activeYearStart = this.dateRange.start.getFullYear()
