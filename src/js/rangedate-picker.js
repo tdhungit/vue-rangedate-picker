@@ -278,7 +278,7 @@ export default {
         return this.active.start + ' - ' + this.active.end
       }
 
-      return ''
+      return this.captions.title
     },
     getDayIndexInMonth: function (r, i, startMonthDay) {
       const date = (this.numOfDays * (r - 1)) + i
