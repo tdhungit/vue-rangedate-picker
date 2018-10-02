@@ -47,6 +47,11 @@ const defaultStyle = {
   dateDisabled: 'calendar_days--disabled'
 }
 
+const defaultActive = {
+  start: null,
+  end: null
+}
+
 const defaultPresets = function (i18n = defaultI18n) {
   return {
     today: function () {
@@ -143,7 +148,7 @@ export default {
     },
     format: {
       type: String,
-      default: 'DD MMM YYYY'
+      default: 'YYYY-MM-DD'
     },
     styles: {
       type: Object,
@@ -172,6 +177,10 @@ export default {
     righttoleft: {
       type: String,
       default: 'false'
+    },
+    active: {
+      type: Object,
+      default: () => defaultActive
     }
   },
   data () {
@@ -259,6 +268,17 @@ export default {
       }
       const dateparse = new Date(Date.parse(date))
       return fecha.format(new Date(dateparse.getFullYear(), dateparse.getMonth(), dateparse.getDate() - 1), format)
+    },
+    getActiveTitle: function () {
+      if (this.dateRange.start && this.dateRange.end) {
+        return this.getDateString(this.dateRange.start) + ' - ' + this.getDateString(this.dateRange.end)
+      }
+
+      if (this.active.start && this.active.end) {
+        return this.active.start + ' - ' + this.active.end
+      }
+
+      return ''
     },
     getDayIndexInMonth: function (r, i, startMonthDay) {
       const date = (this.numOfDays * (r - 1)) + i
