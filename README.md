@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-npm install --save vue-rangedate-picker
+npm install --save https://github.com/tdhungit/vue-rangedate-picker.git
 ```
 
 ## Usage
@@ -31,9 +31,6 @@ Vue.use(VueRangedatePicker)
 <!-- Include after Vue -->
 <!-- Local files -->
 <script src="vue-rangedate-picker/dist/vue-rangedate-picker.min.js"></script>
-
-<!-- From CDN -->
-<script src="https://unpkg.com/vue-rangedate-picker"></script>
 ```
 
 ### Available Events
@@ -76,7 +73,7 @@ You can pass these below props to `<rangedate-picker :props="props"></rangedate-
 
   *Type* : Array
 
-  *Default Value* : 
+  *Default Value* :
   ```javascript
   ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli',
    'Agustus', 'September', 'Oktober', 'November', 'Desember']
@@ -88,7 +85,7 @@ You can pass these below props to `<rangedate-picker :props="props"></rangedate-
 
   *Type* : Array
 
-  *Default Value* : 
+  *Default Value* :
   ```javascript
   ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab']
   ```
@@ -99,7 +96,7 @@ You can pass these below props to `<rangedate-picker :props="props"></rangedate-
 
   *Type* : Object
 
-  *Default Value* : 
+  *Default Value* :
   ```javascript
   {
     'title': 'Choose Dates',
@@ -121,7 +118,7 @@ You can pass these below props to `<rangedate-picker :props="props"></rangedate-
 
   *Type* : Object
 
-  *Default Value* : 
+  *Default Value* :
   ```javascript
   {
     daysWeeks: 'calendar_weeks',
@@ -164,7 +161,7 @@ You can pass these below props to `<rangedate-picker :props="props"></rangedate-
 
   *Type* : Object
 
-  Example Object : 
+  Example Object :
   ```javascript
   {
     today: function () {
@@ -183,7 +180,7 @@ You can pass these below props to `<rangedate-picker :props="props"></rangedate-
   }
   ```
 
-  *Default Value* : 
+  *Default Value* :
   ```javascript
   {
     today: function () {
