@@ -386,6 +386,12 @@ export default {
       if (!this.isCompact) {
         this.toggleCalendar()
       }
+    },
+    clearDate: function () {
+      this.dateRange = {}
+      this.active = {}
+      this.$emit('selected', this.dateRange)
+      this.toggleCalendar()
     }
   }
 }
