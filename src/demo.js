@@ -13,8 +13,8 @@
 import VueRangeDatePicker from './RangedatePicker.vue'
 
 new window.Vue({
-  el: 'app',
-  template: `<div id="demo">
+    el: 'app',
+    template: `<div id="demo">
 <div>
 <strong>Full form</strong>
 <vue-rangedate-picker></vue-rangedate-picker>
@@ -24,5 +24,5 @@ new window.Vue({
 <vue-rangedate-picker compact="true"></vue-rangedate-picker>
 </div>
 </div>`,
-  components: { VueRangeDatePicker }
+    components: {VueRangeDatePicker}
 })
