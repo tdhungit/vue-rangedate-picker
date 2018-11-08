@@ -288,4 +288,8 @@
     .calendar_preset li.calendar_preset-ranges[data-v-5e837f70] {
         padding: 0 5px 0 5px;
     }
+
+    .calendar[data-v-5e837f70] {
+        height: 350px;
+    }
 </style>
